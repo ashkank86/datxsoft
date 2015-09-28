@@ -44,4 +44,17 @@ class Utilities
 
 		return 'datx-' . $output;
 	}
+
+	public static function convertPersianNumbersToFloat($string)
+	{
+		$persian_digits_1 = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+		$persian_digits_2 = ['٩', '٨', '٧', '٦', '٥', '٤', '٣', '٢', '١', '٠'];
+		$all_persian_digits = array_merge($persian_digits_1, $persian_digits_2);
+		$replaces = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '9', '8', '7', '6', '5', '4', '3', '2', '1'];
+		$output = str_replace([" ", ",", "'"], ["", "", ""], $string);
+		$output = str_replace($all_persian_digits, $replaces, $output);
+		$output = floatval($output);
+
+		return $output;
+	}
 }

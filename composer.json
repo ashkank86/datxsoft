@@ -1,17 +1,22 @@
 {
 	"name": "datxsoft/utilities",
+	"type": "library",
 	"description": "A classic collection of php utilities.",
+	"homepage": "https://github.com/datxsoft/utilities",
+	"license": "GNU",
 	"authors": [
 		{
 			"name": "Aria Radmand",
-			"email": "a.radmand@datxsoft.com"
+			"email": "a.radmand@datxsoft.com",
+			"homepage": "http://ariaa.net",
+			"role": "Developer"
 		}
 	],
 	"minimum-stability": "dev",
 	"require": {},
 	"autoload": {
 		"psr-0": {
-			"Datxsoft": "Src/"
+			"Datxsoft": "src"
 		}
 	}
 }
