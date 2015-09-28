@@ -1,0 +1,17 @@
+{
+	"name": "datxsoft/utilities",
+	"description": "A classic collection of php utilities.",
+	"authors": [
+		{
+			"name": "Aria Radmand",
+			"email": "a.radmand@datxsoft.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"psr-0": {
+			"Datxsoft": "Src/"
+		}
+	}
+}
