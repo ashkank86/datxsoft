@@ -45,6 +45,9 @@ class Utilities
 		return 'datx-' . $output;
 	}
 
+	/*
+	 * test
+	 */
 	public static function convertPersianNumbersToFloat($string)
 	{
 		$persian_digits_1 = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
