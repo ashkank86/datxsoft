@@ -46,7 +46,7 @@ class Utilities
 	}
 
 	/*
-	 * test
+	 * test 2
 	 */
 	public static function convertPersianNumbersToFloat($string)
 	{
