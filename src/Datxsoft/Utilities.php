@@ -48,7 +48,7 @@ class Utilities
 	/*
 	 * test 2
 	 */
-	public static function convertPersianNumbersToFloat($string)
+	public static function persianNumberToFloat($string)
 	{
 		$persian_digits_1 = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
 		$persian_digits_2 = ['٩', '٨', '٧', '٦', '٥', '٤', '٣', '٢', '١', '٠'];
