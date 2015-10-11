@@ -60,4 +60,11 @@ class Utilities
 
 		return $output;
 	}
+
+	public static function uiPrintFinancialNumber($string, $decimal = 0)
+	{
+		$output = "<span class=\"financial-number-<%= {$string} > 0 ? 'positive' : 'negative' %>\"><%= financialNumber({$string}, {$decimal}) %></span>";
+
+		return $output;
+	}
 }
