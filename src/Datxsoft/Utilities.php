@@ -112,7 +112,7 @@ class Utilities
 			$instrument_object = TseInstrument::where('InsCode', $input)->orWhere('InstrumentID', $input)->first();
 		}
 		$attributes = ['target' => '_self'];
-		$url = "/api/v1/stock/detail/" . $instrument_object->InsCode;
+		$url = "//www.dttsplus.com/api/v1/stock/detail/" . $instrument_object->InsCode;
 		$title = 'DTTSplus';
 
 		return link_to($url, $title, $attributes);
