@@ -67,4 +67,73 @@ class Utilities
 
 		return $output;
 	}
+
+	/**
+	 * @param $string
+	 *
+	 * @return mixed
+	 */
+	public static function linkToWiki($string)
+	{
+		$attributes = ['target' => '_blank'];
+
+		return link_to('//wiki.dttsplus.com/' . $string, $string, $attributes);
+	}
+
+	/**
+	 * @param $input : instrument eloquent object or $instrument_code or InstrumentID
+	 *
+	 * @return mixed
+	 */
+	public static function linkToTsetmc($input)
+	{
+		if (is_object($input)) {
+			$instrument_object = $input;
+		} else {
+			$instrument_object = TseInstrument::where('InsCode', $input)->orWhere('InstrumentID', $input)->first();
+		}
+		$attributes = ['target' => '_blank'];
+		$url = "http://www.tsetmc.com/Loader.aspx?ParTree=151311&amp;i=" . $instrument_object->InsCode;
+		$title = 'TSETMC';
+
+		return link_to($url, $title, $attributes);
+	}
+
+	/**
+	 * @param $input : instrument eloquent object or $instrument_code or InstrumentID
+	 *
+	 * @return mixed
+	 */
+	public static function linkToDttsplus($input)
+	{
+		if (is_object($input)) {
+			$instrument_object = $input;
+		} else {
+			$instrument_object = TseInstrument::where('InsCode', $input)->orWhere('InstrumentID', $input)->first();
+		}
+		$attributes = ['target' => '_self'];
+		$url = "/api/v1/stock/detail/" . $instrument_object->InsCode;
+		$title = 'DTTSplus';
+
+		return link_to($url, $title, $attributes);
+	}
+
+	/**
+	 * @param $input : instrument eloquent object or $instrument_code or InstrumentID
+	 *
+	 * @return mixed
+	 */
+	public static function linkToTse($input)
+	{
+		if (is_object($input)) {
+			$instrument_object = $input;
+		} else {
+			$instrument_object = TseInstrument::where('InsCode', $input)->orWhere('InstrumentID', $input)->first();
+		}
+		$attributes = ['target' => '_blank'];
+		$url = "http://new.tse.ir/Instrument.html?" . $instrument_object->InstrumentID;
+		$title = 'TSE';
+
+		return link_to($url, $title, $attributes);
+	}
 }
