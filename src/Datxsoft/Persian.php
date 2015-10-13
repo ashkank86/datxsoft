@@ -1,5 +1,6 @@
 <?php
 namespace Datxsoft;
+use Cache;
 class Persian
 {
 	static protected $persian_digits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', '٤', '٥', '٦'];

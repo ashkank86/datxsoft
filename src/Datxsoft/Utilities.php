@@ -1,7 +1,6 @@
 <?php
 namespace Datxsoft;
 use TseInstrument;
-use Cache;
 class Utilities
 {
 	public static function userAgent()
