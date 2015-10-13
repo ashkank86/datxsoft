@@ -109,7 +109,7 @@ class Utilities
 		if (is_object($input)) {
 			$instrument_object = $input;
 		} else {
-			$instrument_object = TseInstrument::where('InsCode', $input)->orWhere('InstrumentID', $input)->first();
+			$instrument_object = \TseInstrument::where('InsCode', $input)->orWhere('InstrumentID', $input)->first();
 		}
 		$attributes = ['target' => '_self'];
 		$url = "//www.dttsplus.com/api/v1/stock/detail/" . $instrument_object->InsCode;
@@ -128,7 +128,7 @@ class Utilities
 		if (is_object($input)) {
 			$instrument_object = $input;
 		} else {
-			$instrument_object = TseInstrument::where('InsCode', $input)->orWhere('InstrumentID', $input)->first();
+			$instrument_object = \TseInstrument::where('InsCode', $input)->orWhere('InstrumentID', $input)->first();
 		}
 		$attributes = ['target' => '_blank'];
 		$url = "http://new.tse.ir/Instrument.html?" . $instrument_object->InstrumentID;
