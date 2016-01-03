@@ -40,6 +40,13 @@ class Persian
 		return $output;
 	}
 
+	public static function latinize($string)
+	{
+		$output = str_replace(self::$persian_digits, self::$english_digits, $string);
+
+		return $output;
+	}
+
 	/**
 	 * @return array
 	 */
