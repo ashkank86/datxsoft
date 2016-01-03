@@ -1,6 +1,6 @@
 <?php
 
-namespace Datxsoft\Jdate;
+namespace Datxsoft;
 use \DateTime;
 use \DateTimeZone;
 
